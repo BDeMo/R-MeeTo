@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<meta property='og:title' content='R-MeeTo: Faster Vision Mamba is Rebuilt in Minutes Via Merged Token Re-training'/>
+<meta property='og:description' content='R-MeeTo: Faster Vision Mamba is Rebuilt in Minutes Via Merged Token Re-training'/>
+<meta property='og:url' content='https://oahzxl.github.io/PAB/'/>
+<meta property='og:image:width' content='1200' />
+<meta property='og:image:height' content='663' />
+<!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+<meta property="og:type" content='website'/>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="R-MeeTo: Faster Vision Mamba is Rebuilt in Minutes Via Merged Token Re-training">
+  <meta name="keywords" content="R-MeeTo: Faster Vision Mamba is Rebuilt in Minutes Via Merged Token Re-training">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>R-MeeTo: Faster Vision Mamba is Rebuilt in Minutes Via Merged Token Re-training</title>
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/tab_gallery.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="juxtapose/css/juxtapose.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/magnifier.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/image_card_fader.css">
+  <link rel="stylesheet" href="./static/css/image_card_slider.css">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Patrick+Hand|Google+Sans|Noto+Sans|Castoro|Lato|Open+Sans&effect=shadow-multiple|emboss|3d"> 
+  <link rel="icon" href="./static/images/pyramid.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./static/images/pyramid.png" type="image/x-icon">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<style>
+  @import url('https://fonts.cdnfonts.com/css/menlo');
+
+  .video-table td, .video-table th {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: normal;
+  }
+  .first-col {
+    width: 7%;
+    vertical-align: middle;
+  }
+  .other-col {
+    width: 31%;
+  }
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 1.1em;
+  }
+  .title.is-3 {
+    font-weight: 900;
+    font-size: 2.0rem;
+  }
+  .title.is-4 {
+    font-weight: 700;
+    font-size: 1.7rem;
+  }
+  .custom-emoji {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background-image: url('./static/images/pyramid.png');
+    background-size: cover;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+</style>
+
+
+<body>
+  <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <br><br>
+          <h1 class="title is-2 publication-title" style="font-size: 2.12rem">
+            R-MeeTo: Faster Vision Mamba is Rebuilt in Minutes Via Merged Token Re-training.
+          </h1>
+        
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://bdemo.github.io/homepage/" target="_blank">Mingjia Shi</a><sup>1*</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="https://github.com/Soptq" target="_blank">Yuhao Zhou</a><sup>2*</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="https://github.com/Aristo23333" target="_blank">Ruiji Yu</a><sup>3</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="https://github.com/lizekai-richard" target="_blank">Zekai Li</a><sup>1</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="" target="_blank">Zhiyuan Liang</a><sup>1</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="https://oahzxl.github.io/" target="_blank">Xuanlei Zhao</a><sup>1</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="https://pengxj.github.io/" target="_blank">Xiaojiang Peng</a><sup>4</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="" target="_blank">Tanmay Rajpurohit</a><sup>5</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="" target="_blank">Ramakrishna Vedantam</a><sup>6</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao</a><sup>1†</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="https://kaiwang960112.github.io/" target="_blank">Kai Wang</a><sup>1†</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a><sup>1</sup>.
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>National University of Singapore,&nbsp;</span>
+            <span class="author-block"><sup>2</sup>Sichuan University,&nbsp;</span>
+            <span class="author-block"><sup>3</sup>Shanghai Jiao Tong University,&nbsp;</span>
+            <span class="author-block"><sup>4</sup>Shenzhen University of Technology,&nbsp;</span>
+            <span class="author-block"><sup>5</sup>Genpact Innovation Center,&nbsp;</span>
+            <span class="author-block"><sup>6</sup>Independent Researcher.</span>
+          </div>
+
+          <!-- <div class="is-size-5 publication-authors">
+            {xuanlei, kai.wang, youy}@comp.nus.edu.sg&nbsp;&nbsp;&nbsp;jin509@purdue.edu
+          </div> -->
+
+          <div class="is-size-5 publication-authors">
+            (*: equal contribution, †: corresponding authors)
+          </div>
+
+          <!-- <div class="is-size-5 publication-venue">
+            in XXX
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/NUS-HPC-AI-Lab/R-MeeTo" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- paper -->
+              <span class="link-block">
+                <a href="https://www.arxiv.org/abs/2408.12588" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- doc -->
+              <span class="link-block">
+                <a href="https://github.com/NUS-HPC-AI-Lab/VideoSys/blob/master/docs/pab.md" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-book"></i>
+                  </span>
+                  <span>Doc</span>
+                  </a>
+              </span>
+              <!-- twitter -->
+              <span class="link-block">
+                <a href="https://x.com/oahzxl/status/1805939975420330298" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>Twitter</span>
+                </a>
+              </span>
+              <!-- bibtex -->
+              <span class="link-block">
+                <a href="#bibtex"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-obp"></i>
+                  </span>
+                  <span>BibTex</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="content has-text-justified">
+        <p>
+          <b>Faster Vision Mamba is Rebuilt in Minutes Via Merged Token Re-training <span style="font-size: 1.3em"></span>!</b>
+          We introduce R-MeeTo the first Token Merging method for Mamba.
+          The key knowledge loss mainly causes the heavier performance drop, applying token reduction.
+          R-MeeTo is thus proposed, fast fixing key knowledge and therefore recovering performance.
+          <br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <video class="video" autoplay controls muted loop playsinline>
+      <source src="./static/videos/video_pre_v5.mp4" type="video/mp4">
+    </video>
+    <div class="columns is-centered">
+      <div class="content has-text-centered">
+        <span style="font-size: 0.8em; width: 100%; display: inline-block;"><br>Video 1. Intuition of our R-MeeTo: 1) why is Mamba sensitive to token reduction? <br> 2) Why does R-MeeTo (i.e., Merging + Re-training) work? -- <span style="color: #ff0000;">Key knowledge loss</span></span>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">R-MeeTo</h2>
+        
+        <h2 class="title is-4">Motivation</h2>
+        <div class="content has-text-justified">
+          <p>
+            Token reduction is popular in model efficiency.
+            It has yielded promising outcomes in ViTs, yet its efficiency in Vim remains unexplored.
+            Thus, we have the following pre-experiments.
+          </p>
+          <div class="content has-text-centered">
+            <video class="video" autoplay controls muted loop playsinline>
+              <source src="./static/videos/video_pre_mamba_drops.mp4" type="video/mp4">
+            </video>
+            <span style="font-size: 0.8em; width: 75%; display: inline-block;">Video 2. Mamba is sensitive to token reduction.</span>
+          </div>
+        </div>
+
+        <h2 class="title is-4">Analyses</h2>
+        <div class="content has-text-justified">
+          <p>
+            From the perspective of knowledge structure, we have the following analyses:
+          </p>
+          <div class="content has-text-centered">
+            <video class="video" autoplay controls muted loop playsinline>
+              <source src="./static/videos/video_pre_analyses.mp4" type="video/mp4">
+            </video>
+            <span style="font-size: 0.8em; width: 100%; display: inline-block;">Video 3. Our analyses: the distributions of <span style="color: #ff0000;">Key Knowledge</span> are different. Token reduction in Mamba is risky</span>
+          </div>
+          <div class="content has-text-justified">
+            Building on these insights, we propose R-MeeTo. R-MeeTo is simple and effective, with only two main modules: merging and re-training. Merging lowers the knowledge loss; re-training fast recovers the knowledge structure of Mamba. From the next video, we show that merging does help.
+            <video class="video" autoplay controls muted loop playsinline>
+              <source src="./static/videos/video_pre_merge_works.mp4" type="video/mp4">
+            </video>
+            <span style="font-size: 0.8em; width: 100%; display: inline-block;">Video 4. Merging works!</span>
+          </div>
+        </div>
+
+        <h2 class="title is-4">Methodology</h2>
+        <div class="content has-text-centered">
+          <div class="content has-text-centered">
+            <video class="video" autoplay controls muted loop playsinline>
+              <source src="./static/videos/video_pre_method.mp4" type="video/mp4">
+            </video>
+            <span style="font-size: 0.8em; width: 80%; display: inline-block;">Video 5: The process of our R-MeeTo.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Evaluations</h2>
+        
+        <h2 class="title is-4">Building in Munites!</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/in_minutes_table.png"  style="width: 30%;">
+          <span style="font-size: 0.8em; width: 100%; display: inline-block;">Table 1. With current available GPUs, we achieve minutes-level method to build faster Mamba.</span>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            R-MeeTo faster Mamba achieved in minutes with limited performance drop.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <h2 class="title is-4">Quanlitive Results</h2>
+    <div class="container is-max-desktop">
+      <video class="video" autoplay controls muted loop playsinline>
+        <source src="./static/videos/video1.mp4" type="video/mp4">
+      </video>
+      <video class="video" autoplay controls muted loop playsinline>
+        <source src="./static/videos/video2.mp4" type="video/mp4">
+      </video>
+      <video class="video" autoplay controls muted loop playsinline>
+        <source src="./static/videos/video3.mp4" type="video/mp4">
+      </video>
+      <br>
+    </div> -->
+  </div>
+  <br>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">        
+        <div class="content has-text-justified">
+          <h2 class="title is-4">Image Tasks</h2>
+          <div class="content has-text-centered">
+            <img src="./static/images/main_table.png" style="width: 100%;"><br>
+            <span style="font-size: 0.8em; width: 100%; display: inline-block;">Table 2. R-MeeTo shows significant improvements on image tasks (i.e., classification on ImageNet-1K).</span>
+          </div>
+          <div class="content has-text-centered">
+            <img src="./static/images/visualization_merge_image.png" style="width: 100%;"><br>
+            <span style="font-size: 0.8em; width: 100%; display: inline-block;">Image 1. Visualization of R-MeeTo on ImageNet-1K, similar and redundant features are merged.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">        
+        <div class="content has-text-justified">
+          <h2 class="title is-4">Video Tasks</h2>
+          <div class="content has-text-centered">
+            <img src="./static/images/main_table_video.png" style="width: 100%;"><br>
+            <span style="font-size: 0.8em; width: 100%; display: inline-block;">Table 3. R-MeeTo shows significant improvements on image tasks (i.e., classification on Kinetics-400)</span>
+            <div class="content has-text-centered">
+              <img src="./static/images/visualization_merge_image.png" style="width: 100%;"><br>
+              <span style="font-size: 0.8em; width: 100%; display: inline-block;">Image 2. Visualization of R-MeeTo on Kinetics-400, similar and redundant features are merged.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <h2 class="title is-3">Acknowledgments</h2>
+<div class="content has-text-justified">
+  <p>
+    Mingjia, Yuhao contribute equally to this work.
+  </p>
+</div> -->
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title"><a id="bibtex">BibTeX</a></h2>
+    <pre><code>@misc{zhao2024pab,
+      title={Faster Vision Mamba is Rebuilt in Minutes Via Merged Token Re-training},
+      author={Mingjia Shi and Yuhao Zhou and Ruiji Yu and Zekai Li and Zhiyuan Liang and Xuanlei Zhao and
+        Xiaojiang Peng and Tanmay Rajpurohit and Ramakrishna Vedantam and
+        Wangbo Zhao and Kai Wang and Yang You1},
+      year={2024},
+      eprint={},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website adapted from the following <a href="https://nerfies.github.io">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="juxtapose/js/juxtapose.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>    
+
+</body>
+</html>
