@@ -207,6 +207,8 @@
           The key knowledge loss mainly causes the heavier performance drop, applying token reduction.
           R-MeeTo is thus proposed, fast fixing key knowledge and therefore recovering performance.
           <br>
+          In the following video, we show the intuition of our work, where <span style="color: #8FAADC;">Genera Knowledge</span> includes the common partterns shared among tokens, and <span style="color: #FFD200">Specific Knowledge</span> indicates the specific partterns in particular tokens.
+          <br>
         </p>
       </div>
     </div>
@@ -218,7 +220,7 @@
     </video>
     <div class="columns is-centered">
       <div class="content has-text-centered">
-        <span style="font-size: 0.8em; width: 100%; display: inline-block;"><br>Video 1. Intuition of our R-MeeTo: 1) why is Mamba sensitive to token reduction? <br> 2) Why does R-MeeTo (i.e., Merging + Re-training) work? -- <span style="color: #ff0000;">Key knowledge loss</span></span>
+        <span style="font-size: 0.8em; width: 100%; display: inline-block;"><br>Conclusion: Intuition of our R-MeeTo: 1) why is Mamba sensitive to token reduction? <br> 2) Why does R-MeeTo (i.e., Merging + Re-training) work? -- <span style="color: #ff0000;">Key knowledge loss and recovery</span></span>
         <br>
       </div>
     </div>
@@ -243,29 +245,29 @@
             <video class="video" autoplay controls muted loop playsinline>
               <source src="./static/videos/video_pre_mamba_drops.mp4" type="video/mp4">
             </video>
-            <span style="font-size: 0.8em; width: 75%; display: inline-block;">Video 2. Mamba is sensitive to token reduction.</span>
+            <span style="font-size: 0.8em; width: 75%; display: inline-block;">Conclusion: Mamba is sensitive to token reduction.</span>
           </div>
         </div>
 
         <h2 class="title is-4">Analyses</h2>
         <div class="content has-text-justified">
           <p>
-            From the perspective of knowledge structure, we have the following analyses:
+            From the perspective of knowledge structure, we have the following analyses (X: inputs; Y: outputs):
           </p>
           <div class="content has-text-centered">
             <video class="video" autoplay controls muted loop playsinline>
               <source src="./static/videos/video_pre_analyses.mp4" type="video/mp4">
             </video>
-            <span style="font-size: 0.8em; width: 100%; display: inline-block;">Video 3. Our analyses: the distributions of <span style="color: #ff0000;">Key Knowledge</span> are different. Token reduction in Mamba is risky</span>
+            <span style="font-size: 0.8em; width: 100%; display: inline-block;">Conclusion: the distributions of <span style="color: #ff0000;">Key Knowledge</span> are different. Token reduction in Mamba is risky</span>
           </div>
-          <div class="content has-text-justified">
-            <p>
-              Building on these insights, we propose R-MeeTo. R-MeeTo is simple and effective, with only two main modules: merging and re-training. Merging lowers the knowledge loss; re-training fast recovers the knowledge structure of Mamba. From the next video, we show that merging does help.
-            </p>
+          <p>
+            Building on these insights, we propose R-MeeTo. R-MeeTo is simple and effective, with only two main modules: merging and re-training. Merging lowers the knowledge loss; re-training fast recovers the knowledge structure of Mamba. From the next video, we show that merging does help.
+          </p>
+          <div class="content has-text-centered">
             <video class="video" autoplay controls muted loop playsinline>
               <source src="./static/videos/video_pre_merge_works.mp4" type="video/mp4">
             </video>
-            <span style="font-size: 0.8em; width: 100%; display: inline-block;">Video 4. Merging works!</span>
+            <span style="font-size: 0.8em; width: 100%; display: inline-block;">Conclusion: merging works!</span>
           </div>
         </div>
 
@@ -275,7 +277,7 @@
             <video class="video" autoplay controls muted loop playsinline>
               <source src="./static/videos/video_pre_method.mp4" type="video/mp4">
             </video>
-            <span style="font-size: 0.8em; width: 80%; display: inline-block;">Video 5: The process of our R-MeeTo.</span>
+            <span style="font-size: 0.8em; width: 80%; display: inline-block;">The process of our R-MeeTo.</span>
           </div>
         </div>
       </div>
@@ -350,11 +352,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title"><a id="bibtex">BibTeX</a></h2>
-    <pre><code>@misc{zhao2024pab,
+    <pre><code>@misc{shi2024faster,
       title={Faster Vision Mamba is Rebuilt in Minutes Via Merged Token Re-training},
       author={Mingjia Shi and Yuhao Zhou and Ruiji Yu and Zekai Li and Zhiyuan Liang and Xuanlei Zhao and
         Xiaojiang Peng and Tanmay Rajpurohit and Ramakrishna Vedantam and
-        Wangbo Zhao and Kai Wang and Yang You1},
+        Wangbo Zhao and Kai Wang and Yang You},
       year={2024},
       eprint={},
       archivePrefix={arXiv},
